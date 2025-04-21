@@ -69,7 +69,7 @@
             </table>
             
             <!-- Add Service Button -->
-            <% if (currentUser && currentUser.role === 'admin') { %>
+            <% if (currentUser && currentUser.role === 'admin'|| currentUser.role === 'secretary') { %>
                 <a href="/services/add" class="add-btn">Add New Service</a>
             <% } %>
             
