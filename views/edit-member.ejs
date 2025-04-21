@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Member</title>
+    <link rel="stylesheet" href="/css/members.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+    <div class="main">
+        <%- include('partials/navbar', { page: 'member' }) %>
+        <hr>
+        <div class="edit-member-container">
+            <h1>Edit Member</h1>
+            <form class="edit-form" action="/members/edit/<%= member._id %>" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="<%= member.username %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="house_no">House Number (Wing-Flat, e.g., A-101)</label>
+                    <input type="text" id="house_no" name="house_no" value="<%= member.house_no %>" required pattern="[A-Z]-\d{3}" title="Format: Wing-FlatNumber (e.g., A-101)">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" value="<%= member.mobile %>" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="<%= member.email %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="member" <%= member.role === 'member' ? 'selected' : '' %>>Member</option>
+                        <option value="admin" <%= member.role === 'admin' ? 'selected' : '' %>>Admin</option>
+                        <option value="secretary" <%= member.role === 'secretary' ? 'selected' : '' %>>Secretary</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="save-btn">Save Changes</button>
+                    <a href="/members" class="cancel-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
