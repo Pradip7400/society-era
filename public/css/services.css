@@ -99,7 +99,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
+            text-decoration: none;       
         }
 .add-btn:hover{
             background-color: rgb(159, 222, 0);
@@ -115,3 +115,4 @@
 .delete-btn:hover{
             background-color: rgb(255, 0, 0);
         }
+
