@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society Members</title>
+    <link rel="stylesheet" href="/css/members.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+    <div class="main">
+        <%- include('partials/navbar', { page: 'member' }) %>
+        <hr>
+        <div class="members-container">
+            <h1>Society Members</h1>
+            <div class="members-grid">
+                <% members.forEach(member => { %>
+                    <div class="member-card">
+                        <h3><%= member.username %></h3>
+                        <div class="member-details">
+                            <div class="detail-item">
+                                <span class="label">Wing:</span>
+                                <span class="value"><%= member.house_no ? member.house_no.split('-')[0] : 'Not Available' %></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Flat No:</span>
+                                <span class="value"><%= member.house_no ? member.house_no.split('-')[1] : 'Not Available' %></span>
+                            </div>
+                        </div>
+                        
+                        <% if (currentUser && currentUser.role === 'admin') { %>
+                        <div class="member-actions">
+                            <a href="/members/edit/<%= member._id %>" class="edit-btn">Edit</a>
+                            <a href="/members/delete/<%= member._id %>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this member?');">Delete</a>
+                        </div>
+                        <% } else if (currentUser && currentUser._id.toString() === member._id.toString()) { %>
+                        <div class="member-actions">
+                            <a href="/members/edit/<%= member._id %>" class="edit-btn">Edit</a>
+                        </div>
+                        <% } %>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    <script>// Highlight Active Page
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".nav-links a");
+            links.forEach(link => {
+                if (window.location.pathname === link.getAttribute("href")) {
+                    link.classList.add("active");
+                }
+            });
+        });
+        
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+        </script>
+</body>
+</html>

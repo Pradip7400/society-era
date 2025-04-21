@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <link rel="stylesheet" href="/css/emergency.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+
+</head>
+<body>
+    <%- include('partials/navbar', { page: 'emergency' }) %>
+
+    <div class="container">
+        <h1>Emergency Help Center</h1>
+        <p>Select an emergency type to request immediate assistance:</p>
+
+        <div class="emergency-grid">
+            <div class="emergency-box" onclick="makeCall('101')">
+                <img src="/images/flame.png" alt="Fire Emergency">
+                <h3>Fire Emergency</h3>
+                <p>Call fire services immediately in case of fire hazards.</p>
+            </div>
+
+            <div class="emergency-box" onclick="makeCall('102')">
+                <img src="/images/hospital.png" alt="Medical Emergency">
+                <h3>Medical Emergency</h3>
+                <p>Contact an ambulance for immediate medical help.</p>
+            </div>
+
+            <div class="emergency-box" onclick="makeCall('1122334455')">
+                <img src="/images/lift-sign.png" alt="Stuck in Lift">
+                <h3>Stuck in Lift</h3>
+                <p>Report lift issues and get quick assistance.</p>
+            </div>
+
+            <div class="emergency-box" onclick="makeCall('918980555231')">
+                <img src="/images/guard.png" alt="Security Assistance">
+                <h3>Security Guard</h3>
+                <p>Alert security for any suspicious activity or threats.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Highlight Active Page
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".nav-links a");
+            links.forEach(link => {
+                if (window.location.pathname === link.getAttribute("href")) {
+                    link.classList.add("active");
+                }
+            });
+        });
+        
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+
+        // Function to make automatic call
+        function makeCall(phoneNumber) {
+            const confirmCall = confirm(`Are you sure you want to call emergency number ${phoneNumber}?`);
+            if (confirmCall) {
+                window.location.href = `tel:${phoneNumber}`;
+            }
+        }
+    </script>
+</body>
+</html>

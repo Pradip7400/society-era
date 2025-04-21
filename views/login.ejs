@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+   
+<div class="container">
+    <div class="heading">
+        <h2 style="text-align: center;">LogIn To <span style="color: red;">Society Era</span></h2>
+    </div>
+
+    <% if (errorMessage) { %>
+        <p style="color: red; text-align: center;"><%= errorMessage %></p>
+    <% } %>
+
+    <form action="/login" method="POST">
+        <div class="form-group">
+            <label for="name">User Name:</label>
+            <input type="text" class="box" name="username" placeholder="User Name" id="name" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="house">House No.:</label>
+            <input type="text" class="box" name="house_no" id="house" placeholder="House No." required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="box" name="password" placeholder="Password" id="password" required>
+        </div>
+        <br>
+        <div class="signup">
+            <p>Don't have an account? <a href="/signup">SignUp</a></p>
+        </div>
+        <br>
+        <div class="button">
+            <button type="submit" class="btn">LogIn</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

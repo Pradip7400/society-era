@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocietyEra - Services</title>
+    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <%- include('partials/navbar', { page: 'services' }) %>
+
+    <!-- Service Introduction -->
+    <div class="content">
+        <div class="body-content">
+            <img class="img1" src="/images/service1.jpg" alt="Plumbing Service">
+            <img class="img2" src="/images/service2.jpg" alt="Electrician Service">
+            <br>
+            <img class="img3" src="/images/service3.jpg" alt="Furniture Repair">
+            <img class="img4" src="/images/service4.jpg" alt="General Maintenance">
+        </div>
+        <div class="head-text">
+            <h1>One Stop Solution for All Household Problems</h1>
+            <h2>Permanent solutions for all your maintenance issues at a single place. <b>Browse - Choose - Call</b></h2>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="main-content">
+        <h1 class="title">Browse Here for Society Maintenance Services</h1>
+        <div class="details">
+            <ul class="details1">
+                <li><b>Society Name:</b> ABC Society</li>
+                <li><b>Available Service Providers:</b></li>
+            </ul>
+            
+            <table class="service-table">
+                <thead>
+                    <tr>
+                        <th>Service Type</th>
+                        <th>Provider Name</th>
+                        <th>Contact</th>
+                        <th>Address</th>
+                        <% if (currentUser && currentUser.role === 'admin') { %>
+                            <th>Actions</th>
+                        <% } %>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% services.forEach(service => { %>
+                        <tr>
+                            <td><%= service.type %></td>
+                            <td><%= service.provider %></td>
+                            <td><%= service.contact %></td>
+                            <td><%= service.address %></td>
+                            <% if (currentUser && currentUser.role === 'admin') { %>
+                                <td>
+                                    <a href="/services/edit/<%= service._id %>" class="add-btn">Edit</a>
+                                    <form action="/services/delete/<%= service._id %>" method="POST" style="display:inline;">
+                                        <button type="submit" class="delete-btn">Delete</button>
+                                    </form>
+                                </td>
+                            <% } %>
+                        </tr>
+                    <% }) %>
+                </tbody>                
+            </table>
+            
+            <!-- Add Service Button -->
+            <% if (currentUser && currentUser.role === 'admin') { %>
+                <a href="/services/add" class="add-btn">Add New Service</a>
+            <% } %>
+            
+            
+
+    <!-- Footer -->
+    <!-- <div class="footer">
+        <h3>SocietyEra Private Limited</h3>
+        <a href="#">@Copyright</a><br>
+        <div class="footer-elements">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div> -->
+    <script>// Highlight Active Page
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".nav-links a");
+            links.forEach(link => {
+                if (window.location.pathname === link.getAttribute("href")) {
+                    link.classList.add("active");
+                }
+            });
+        });
+        
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+        </script>
+</body>
+</html>

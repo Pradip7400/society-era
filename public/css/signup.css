@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/back2login.png");  
+    background-size: cover;
+  }
+  .container{
+      padding: 10px;
+      margin: 10px;
+      height: 500px;
+      width: 400px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000000;
+      opacity: 0.8;
+      position:absolute;
+      top: 50px;
+      left: 450px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+  }
+  .btn{
+      height: auto;
+      width: 400px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 20px;
+      
+  }
+  .box{
+    border: 2px solid black;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px black;
+    height: 20px;
+  }
+  .signup a{
+    text-decoration: none;
+  }
+  .btn:hover{
+    background-color:  #2980b9;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .button{
+    text-align: center;
+  }

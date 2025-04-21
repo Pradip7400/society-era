@@ -1,0 +1,94 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8fbff; /* Light background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Logo Styling */
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.username{
+    font-size: 12px;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+/* Highlight Active Page */
+.nav-item.active {
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Authentication Section */
+.auth-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Profile and Logout */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-link, .logout-btn {
+    text-decoration: none;
+    font-size: 14px;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.profile-link:hover, .logout-btn:hover {
+    color: #0056b3;
+}

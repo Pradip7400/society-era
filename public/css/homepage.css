@@ -1,0 +1,114 @@
+/* General Navbar Styling */
+body{
+    background-color: #ffffff !important;}
+.search-container {
+     position: relative;
+     display: inline-block;
+      }
+.body-img{
+    height: 25rem;
+    width: 45rem;
+    margin: 50px;
+    border-radius: 10px; 
+    margin-right: 3%;
+}
+.body-content{
+    padding-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    background-color: #dedaba;
+}
+.text{
+    color: rgb(218, 85, 85);
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 15% ;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px rgb(17, 17, 17);
+    text-decoration: none;
+}
+.text1{
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.login-btn{
+    background-color: rgb(121, 144, 53) !important;
+    border: none !important;
+
+}
+.end-content-img{
+    height: 25rem;
+    width: 45rem;
+    margin: 70px;
+    border-radius: 10px;
+}
+.end-content{
+    display: flex;  
+}
+.end-text{
+    color: rgb(227, 96, 96);
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 25% ;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 1px rgb(245, 164, 164);
+    text-decoration: underline;
+    padding-left: 15px;
+}
+.points{
+    font-weight: 200;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.points1{
+    font-weight: 400;
+    font-size: larger;
+    text-align: center;
+    padding-left: 10%;
+}
+.end-title{
+    background-color: white !important;
+    height: 12rem;
+}
+.end-title{
+    padding: 2.5rem;
+    /* margin: 3rem; */
+
+}
+.end-title1{
+    align-items: center;
+    text-decoration: underline;
+    justify-content: center;
+    padding-left: 23rem;
+    color: rgb(227, 96, 96);
+    text-shadow: 2px 1px rgb(19, 18, 19);
+}
+.end-title2{
+    padding-left: 5rem;
+    font-weight: lighter;
+    font-size: 2rem;
+    color: darkmagenta;
+}
+.footer{
+    background-color: rgb(199, 190, 190);
+    height: 10%;
+    border: 2px  black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    padding: 15px;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+
+

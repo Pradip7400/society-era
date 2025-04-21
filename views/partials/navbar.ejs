@@ -1,0 +1,27 @@
+<nav class="navbar">
+    <div class="logo">
+        <h1>Society Era</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/homepage" class="nav-item">Home</a></li>
+        <li><a href="/members" class="nav-item">Members</a></li>
+        <li><a href="/notices" class="nav-item">Notice Board</a></li>
+        <li><a href="/complaints" class="nav-item">Complaints</a></li>
+        <li><a href="/services" class="nav-item">Services</a></li>
+        <!-- <li><a href="/references" class="nav-item">References</a></li> -->
+        <li><a href="/emergency" class="nav-item">Emergency Help</a></li>
+    </ul>
+    <div class="auth-section">
+        <% if(!currentUser) { %>
+            <a href="/signup" class="btn">Sign-up</a>
+            <a href="/login" class="btn">Log-In</a>
+        <% } else { %>
+            <div class="user-profile">
+                <span class="username"><%= currentUser.username.split(' ')[0] %></span>
+
+                <a href="/profile" class="profile-link">Profile</a>
+                <a href="/logout" class="logout-btn">Log-Out</a>
+            </div>
+        <% } %>
+    </div>
+</nav>

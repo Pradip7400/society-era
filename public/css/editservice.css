@@ -1,0 +1,81 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa; /* Light gray background */
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form Container */
+.container {
+    background: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+form{
+    width: 400px;
+    align-items: center;
+    text-align: center;
+    margin-left: 35%;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-style: bold;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

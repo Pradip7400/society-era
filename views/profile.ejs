@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+    <%- include("partials/navbar", { page: "profile" }) %>
+
+    <div class="profile-container">
+        <h1>Your Profile</h1>
+        <div class="profile-card">
+            <p><strong>Full Name:</strong> <%= user.username %></p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Mobile Number:</strong> <%= user.mobile %></p>
+            <p><strong>House No:</strong> <%= user.house_no %></p>
+            <p><strong>Role:</strong> <%= user.role %></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+.content{
+ display: flex;
+  background-color: #cbc7ab;
+          }
+.body-content{
+      margin: 5rem;
+      width: 600px;
+      align-items: center;
+      justify-content: center;
+      box-shadow:10px 5px 5px #898145;
+      border-radius: 10px;
+          }
+.head-text{
+            width: 500px;
+            padding-top: 6rem;
+          }
+.head-text h1{
+            color: rgb(218, 85, 85);
+            font-size: 45px;
+            font-weight: bold;
+            padding-top: 8% ;
+            align-items: center;
+            justify-content: center;
+          }
+.head-text h2{
+            font-weight: lighter;
+            font-size: 30px;
+          }
+.img1{
+            border-radius: 10px;
+            height: 180px;
+            width: 335px;
+          }
+.img2{
+            border-radius: 10px;
+            height: 180px;
+            width: 260px;
+          }
+.img3{
+            border-radius: 10px;
+            height: 180px;
+            width: 305px;
+          }
+.img4{
+            border-radius: 10px;
+            height: 180px;
+            width: 290px;
+          }
+.footer{
+              background-color: rgb(199, 190, 190);
+              height: 10%;
+              border: 2px  black;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              font-size: large;
+              padding: 15px;
+          }
+.footer a{
+              text-decoration: none;
+              color: black;
+          }
+.title{
+            text-align: center;
+            color: rgb(226, 92, 92);
+          }
+.main-content{
+            background-color: rgb(255, 255, 255);
+          }
+
+        
+.service-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 5px 5px 10px rgb(166, 162, 162);
+            background-color: white;
+        }
+        
+.service-table th, .service-table td {
+            padding: 12px;
+            border: 1px solid #898145;
+            text-align: left;
+        }
+        
+.service-table th {
+            background-color: rgb(226, 92, 92);
+            color: white;
+        }
+        
+.service-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+.add-btn{
+            background-color: rgb(8, 236, 0);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+.add-btn:hover{
+            background-color: rgb(159, 222, 0);
+        }
+.delete-btn{
+            background-color: rgb(255, 0, 0);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+.delete-btn:hover{
+            background-color: rgb(255, 0, 0);
+        }

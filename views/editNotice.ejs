@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Notice</title>
+    <link rel="stylesheet" href="/css/notice.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+    <%- include('partials/navbar', { page: 'notices' }) %>
+    
+    <div class="notice-form-container">
+        <h1>Edit Notice</h1>
+        <form action="/notices/update/<%= notice._id %>" method="POST" class="notice-form">
+            <div class="form-group">
+                <label for="title">Notice Title</label>
+                <input type="text" id="title" name="title" value="<%= notice.title %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="details">Notice Details</label>
+                <textarea id="details" name="details" required rows="6"><%= notice.details %></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Update Notice</button>
+                <a href="/notices" class="cancel-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".nav-links a");
+            links.forEach(link => {
+                if (window.location.pathname === link.getAttribute("href")) {
+                    link.classList.add("active");
+                }
+            });
+        });
+        
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

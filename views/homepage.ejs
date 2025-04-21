@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocietyEra</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+    <div class="main">
+      <%- include('partials/navbar', { page: 'home' }) %>
+
+  
+    <div class="body-content">
+        <div class="content-text">
+        <h1 class="text">Community Building Simplified</h1>
+        <br>
+        <h3 class="text1">A comprehensive digital platform to take care of
+          your society's security, accounts,
+          communication & much more.</h3>
+        </div>
+        <img class="body-img" src="/images/homeimg2.jpg" alt=" Image not found">
+    </div>
+    <div class="end-content">
+      <img class="end-content-img" src="/images/homeimg.jpg" alt="Image not found ">
+      <div class="end-content-text">
+        <h2 class="end-text" style="text-decoration: none;">SocietyEra for everyone</h2>
+        <h2 class="points">Residents</h2>
+        <h2 class="points">Visitor Management</h2>
+        <h2 class="points">Delivery Management</h2>
+        <h2 class="points">Daily Help Management</h2>
+        <h2 class="points">Child Security</h2>
+        <br><br>
+        <h2 class="points1"><b>Committee Members</b></h2>
+        <h2 class="points">Proper Staff Attendance</h2>
+        <h2 class="points">Complaint Management</h2>
+        <h2 class="points">Communications</h2>
+        <h2 class="points">Better Management</h2>
+
+      </div>
+    </div>
+    <div class="end-title">
+      <h1 class="end-title1" style="text-decoration: none;">We simplify the complex!</h1>
+      <h3 class="end-title2">For everything connected with the housing society, we have a digital solution.</h3>
+    </div>
+    <!-- <div class="footer">
+      <h4>SocietyEra Private Limited</h4>
+      <a href="#">@Copyright</a><br>
+      <div class="footer-elements">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      </div>
+    </div> -->
+    <script>// Highlight Active Page
+      document.addEventListener("DOMContentLoaded", function () {
+          const links = document.querySelectorAll(".nav-links a");
+          links.forEach(link => {
+              if (window.location.pathname === link.getAttribute("href")) {
+                  link.classList.add("active");
+              }
+          });
+      });
+      
+      // Toggle Mobile Menu
+      function toggleMenu() {
+          document.querySelector(".nav-links").classList.toggle("active");
+      }
+      </script>
+
+</body>
+</html>
